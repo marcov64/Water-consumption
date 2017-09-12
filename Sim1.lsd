@@ -1,0 +1,392 @@
+	
+Label Root
+{
+	Son: City
+	Label City
+	{
+		Son: HH
+		Label HH
+		{
+			Param: row
+			Param: col
+			Param: Income
+			Param: Size
+			Var: WaterConsumption
+			Var: WaterSaving
+			Var: WaterBill
+			Var: CumulatedWater
+			Var: LongTermBill
+			Param: CounterDays
+
+		}
+
+		Var: Init
+		Param: nRows
+		Param: nCols
+		Param: minIncome
+		Param: maxIncome
+		Param: minSize
+		Param: maxSize
+		Param: wSocialEffect
+		Param: wBillingEffect
+		Param: wLongTermBill
+		Param: wIncomeBill
+		Param: DaysBill
+		Param: UnitWater
+		Param: varUnitCon
+		Param: BillingSystem
+		Func: ComputeBill
+		Func: LinearBilling
+		Param: UnitCost
+		Param: speedLongTermBill
+		Param: ShareSizeIncome
+		Var: Statistics
+		Param: TotalConsumption
+		Param: Revenues
+		Param: AvSaving
+
+	}
+
+
+}
+
+
+DATA
+
+Object: Root C	1
+
+Object: City C	1
+Var: Init 0 n + d n
+Param: nRows 0 n + n n	100
+Param: nCols 0 n + n n	100
+Param: minIncome 0 n + n n	10000
+Param: maxIncome 0 n + n n	100000
+Param: minSize 0 n + n n	50
+Param: maxSize 0 n + n n	300
+Param: wSocialEffect 0 n + n n	0.2
+Param: wBillingEffect 0 n + n n	0.2
+Param: wLongTermBill 0 n + n n	0.2
+Param: wIncomeBill 0 n + n n	0.1
+Param: DaysBill 0 n + n n	30
+Param: UnitWater 0 n + n n	100
+Param: varUnitCon 0 n + n n	0.05
+Param: BillingSystem 0 n + n n	1
+Func: ComputeBill 0 n + n n
+Func: LinearBilling 0 n + n n
+Param: UnitCost 0 n + n n	1
+Param: speedLongTermBill 0 n + n n	0.9
+Param: ShareSizeIncome 0 n + n n	0.5
+Var: Statistics 0 n + n n
+Param: TotalConsumption 0 s + n n	0
+Param: Revenues 0 s + n n	0
+Param: AvSaving 0 s + n n	0
+
+Object: HH C	1
+Param: row 0 n + n n	0
+Param: col 0 n + n n	0
+Param: Income 0 n + n n	0
+Param: Size 0 n + n n	0
+Var: WaterConsumption 0 s + n n
+Var: WaterSaving 1 s + d n	0
+Var: WaterBill 1 s + n n	-1
+Var: CumulatedWater 1 s + n n	-1
+Var: LongTermBill 1 s + n n	-1
+Param: CounterDays 0 n + n n	0
+
+SIM_NUM 1
+SEED 1
+MAX_STEP 1000
+EQUATION fun_water.cpp
+ MODELREPORT modelreport.html
+
+DESCRIPTION
+
+Object_Root
+(no description available)
+END_DESCRIPTION
+
+Object_City
+(no description available )
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Init
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_nRows
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_nCols
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_minIncome
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_maxIncome
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_minSize
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_maxSize
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_wSocialEffect
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_wBillingEffect
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_wLongTermBill
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_wIncomeBill
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_DaysBill
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_UnitWater
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_varUnitCon
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_BillingSystem
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Function_ComputeBill
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Function_LinearBilling
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_UnitCost
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_speedLongTermBill
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_ShareSizeIncome
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Statistics
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_TotalConsumption
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_Revenues
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_AvSaving
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Object_HH
+(no description available )
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_row
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_col
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_Income
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_Size
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_WaterConsumption
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_WaterSaving
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_WaterBill
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_CumulatedWater
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_LongTermBill
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_CounterDays
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+
+DOCUOBSERVE
+
+END_DOCUOBSERVE
+
+
+DOCUINITIAL
+
+END_DOCUINITIAL
+
+
+EQ_FILE
+#include "fun_head.h"
+
+MODELBEGIN
+
+
+
+
+EQUATION("Init")
+/*
+Initialization function, executed only once at the start of the simulation and then turned into a parameter to avoid its execution in the following times steps.
+*/
+
+v[0]=V("nRows");
+v[1]=V("nCols");
+
+p->init_lattice_net( (int)v[0], (int)v[1], "HH", 1);
+
+v[2]=V("minIncome");
+v[3]=V("maxIncome");
+v[5]=V("minSize");
+v[6]=V("maxSize");
+CYCLE(cur, "HH")
+ { k=VS_NODEID(cur)-1;
+   i=k/(int)v[1];
+   j=k-i*(int)v[1];
+   WRITES(cur,"row",(double)i+1);
+   WRITES(cur,"col",(double)j+1);
+   v[4]=UNIFORM(v[2],v[3]);
+   WRITES(cur,"Income",v[4]);
+   v[7]=UNIFORM(v[5],v[6]);
+   WRITES(cur,"Size",v[7]);
+    
+ }
+
+PARAMETER  
+RESULT(1 )
+
+
+
+
+
+
+
+
+MODELEND
+
+
+
+
+void close_sim(void)
+{
+
+}
+
+
+
+END_EQ_FILE
